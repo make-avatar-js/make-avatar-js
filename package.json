@@ -1,0 +1,34 @@
+{
+  "name": "make-avatar-js",
+  "version": "0.0.1",
+  "description": "A solution to allow users to create custom avatar. The aim is to provide a javascript library that can be added to any project and will work in most modern browsers.",
+  "main": "dist/make.avatar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/make-avatar-js/make-avatar-js.git"
+  },
+  "keywords": [
+    "avatar",
+    "make",
+    "js",
+    "svg",
+    "library"
+  ],
+  "author": "Marcus Floriano",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/make-avatar-js/make-avatar-js/issues"
+  },
+  "homepage": "https://github.com/make-avatar-js/make-avatar-js#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "qunitjs": "^2.0.0-rc1"
+  }
+}
