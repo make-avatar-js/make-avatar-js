@@ -37,14 +37,34 @@
       assert.equal( MAJS._draw.width(), 350, "expect the UI with 350 width" );
       assert.equal( MAJS._draw.height(), 250, "expect the UI with 250 height" );
 
-      assert.equal( MAJS._scene.main.width(), 250, "expect the UI main with 250 width" );
+      assert.equal( MAJS._scene.main.width(), 350 * 0.75, "expect the UI main with 250 width" );
       assert.equal( MAJS._scene.main.height(), 250, "expect the UI main 250 height" );
       assert.equal( MAJS._scene.main.style('fill'), "#f2f2f2", "expect the UI menu fill with #f2f2f2" );
 
-      assert.equal( MAJS._scene.menu.width(), 100, "expect the UI menu with 100 width" );
+      assert.equal( MAJS._scene.menu.width(), 350 * 0.25, "expect the UI menu with " +(350 * 0.25)+ " width" );
       assert.equal( MAJS._scene.menu.height(), 250, "expect the UI menu 250 height" );
-      assert.equal( MAJS._scene.menu.x(), 250, "expect the UI menu position X on 250" );
+      assert.equal( MAJS._scene.menu.x(), 350 * 0.75, "expect the UI menu position X on 250" );
       assert.equal( MAJS._scene.menu.style('fill'), "#e6e6e6", "expect the UI menu fill with #e6e6e6" );
+    });
+    QUnit.test( "change size and adaptive of scene", function( assert ) {
+      MAJS.init({
+        width: 600,
+        height: 400
+      });
+      assert.equal( MAJS._draw.width(), 600, "expect the UI with 600 width" );
+      assert.equal( MAJS._draw.height(), 400, "expect the UI with 400 height" );
+
+      assert.equal( MAJS._scene.main.width(), (600 * 0.75), "expect the UI main with 75% width" );
+      assert.equal( MAJS._scene.main.height(), 400, "expect the UI main 400 height" );
+
+      assert.equal( MAJS._scene.menu.x(), (600 * 0.75), "expect the UI menu position "+(600 * 0.75)+" on 250" );
+    });
+    QUnit.test( "check minimal size of scene", function( assert ) {
+      MAJS.init({
+        width: 200,
+        height: 200
+      });
+      assert.equal( MAJS.name, "Make Avatar JS", "expect object MAJS" );
     });
   </script>
 </body>
