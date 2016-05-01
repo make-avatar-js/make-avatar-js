@@ -33,17 +33,18 @@
     });
     QUnit.test( "check the struct UI", function( assert ) {
       MAJS.init({});
-      assert.equal( MAJS.draw.width(), 350, "expect the UI with 350 width" );
-      assert.equal( MAJS.draw.height(), 250, "expect the UI with 250 height" );
 
-      assert.equal( MAJS.main.width(), 250, "expect the UI main with 250 width" );
-      assert.equal( MAJS.main.height(), 250, "expect the UI main 250 height" );
-      assert.equal( MAJS.main.style('fill'), "#f2f2f2", "expect the UI menu fill with #f2f2f2" );
+      assert.equal( MAJS._draw.width(), 350, "expect the UI with 350 width" );
+      assert.equal( MAJS._draw.height(), 250, "expect the UI with 250 height" );
 
-      assert.equal( MAJS.menu.width(), 100, "expect the UI menu with 100 width" );
-      assert.equal( MAJS.menu.height(), 250, "expect the UI menu 250 height" );
-      assert.equal( MAJS.menu.x(), 250, "expect the UI menu position X on 250" );
-      assert.equal( MAJS.menu.style('fill'), "#e6e6e6", "expect the UI menu fill with #f2f2f2" );
+      assert.equal( MAJS._scene.main.width(), 250, "expect the UI main with 250 width" );
+      assert.equal( MAJS._scene.main.height(), 250, "expect the UI main 250 height" );
+      assert.equal( MAJS._scene.main.style('fill'), "#f2f2f2", "expect the UI menu fill with #f2f2f2" );
+
+      assert.equal( MAJS._scene.menu.width(), 100, "expect the UI menu with 100 width" );
+      assert.equal( MAJS._scene.menu.height(), 250, "expect the UI menu 250 height" );
+      assert.equal( MAJS._scene.menu.x(), 250, "expect the UI menu position X on 250" );
+      assert.equal( MAJS._scene.menu.style('fill'), "#e6e6e6", "expect the UI menu fill with #e6e6e6" );
     });
   </script>
 </body>
