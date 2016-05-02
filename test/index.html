@@ -59,10 +59,40 @@
 
       assert.equal( MAJS._scene.menu.x(), (600 * 0.75), "expect the UI menu position "+(600 * 0.75)+" on 250" );
     });
-    QUnit.test( "check minimal size of scene", function( assert ) {
+    QUnit.test( "check button of menu", function( assert ) {
       MAJS.init({
-        width: 200,
-        height: 200
+        width: 600,
+        height: 400
+      });
+      assert.equal( MAJS.name, "Make Avatar JS", "expect object MAJS" );
+      assert.equal( MAJS._scene.menu_btn_top.width(), (600 * 0.25), "expect button top with size relative of menu" );
+      assert.equal( MAJS._scene.menu_btn_top.height(), (400 * 0.05), "expect height btn_top" );
+      assert.equal( MAJS._scene.menu_btn_top.x(), (600 * 0.75), "expect button top with position X relative of menu" );
+      assert.equal( MAJS._scene.menu_btn_top.y(), 0, "expect button top with position Y relative of menu" );
+      assert.equal( MAJS._scene.menu_btn_top.style('fill'), "#d9d9d9", "expect fill #d9d9d9" );
+
+      assert.equal( MAJS._scene.menu_btn_top_arrow.width(), (600 * 0.03), "expect width arrow" );
+      assert.equal( MAJS._scene.menu_btn_top_arrow.height(), (400 * 0.02), "expect height arrow" );
+      assert.equal( MAJS._scene.menu_btn_top_arrow.x(), (600 * 0.75) + ((600 * 0.25)/2) - ((600 * 0.03)/2), "expect position X arrow" );
+      assert.equal( MAJS._scene.menu_btn_top_arrow.y(), ((400 * 0.05)/2) - ((400 * 0.02)/2) , "expect position Y arrow" );
+      assert.equal( MAJS._scene.menu_btn_top_arrow.style('fill'), "#a6a6a6", "expect fill #a6a6a6" );
+
+      assert.equal( MAJS._scene.menu_btn_bottom.width(), (600 * 0.25), "expect button botton with size relative of menu" );
+      assert.equal( MAJS._scene.menu_btn_bottom.height(), (400 * 0.05), "expect height btn_button" );
+      assert.equal( MAJS._scene.menu_btn_bottom.x(), (600 * 0.75), "expect button top with position X relative of menu" );
+      assert.equal( MAJS._scene.menu_btn_bottom.y(), 400 - (400 * 0.05), "expect button top with position Y relative of menu" );
+      assert.equal( MAJS._scene.menu_btn_bottom.style('fill'), "#d9d9d9", "expect fill #d9d9d9" );
+
+      assert.equal( MAJS._scene.menu_btn_bottom_arrow.width(), (600 * 0.03), "expect width arrow" );
+      assert.equal( MAJS._scene.menu_btn_bottom_arrow.height(), (400 * 0.02), "expect height arrow" );
+      assert.equal( MAJS._scene.menu_btn_bottom_arrow.x(), (600 * 0.75) + ((600 * 0.25)/2) - ((600 * 0.03)/2), "expect position X arrow" );
+      assert.equal( MAJS._scene.menu_btn_bottom_arrow.y(), (400 - (400 * 0.05)) + (((400 * 0.05)/2) - ((400 * 0.02)/2) ), "expect position Y arrow" );
+      assert.equal( MAJS._scene.menu_btn_bottom_arrow.style('fill'), "#a6a6a6", "expect fill #a6a6a6" );
+    });
+    QUnit.test( "create a new instance of MAJS", function( assert ) {
+      MAJS.init({
+        width:600,
+        height:600
       });
       assert.equal( MAJS.name, "Make Avatar JS", "expect object MAJS" );
     });
